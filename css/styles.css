@@ -1,11 +1,13 @@
 :root {
   --primery-font: 'Roboto', sans-serif;
-
+  --secondary-font: 'Raleway', sans-serif;
+  --color-text:  #434455;
+  --color-hover: #404bbf;
 }
 
 body {
   font-family: var(--primery-font);
-  color: #434455;
+  color: var(--color-text);
   background-color: #FFFFFF;
 }
 
@@ -53,7 +55,7 @@ button {
 
 /* ------Components Header------ */
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -79,7 +81,7 @@ button {
 
 .menu-link:hover,
 .menu-link:focus {
-  color: #404bbf;
+  color: var(--color-hover);
   text-decoration: underline;
 }
 
@@ -88,7 +90,7 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--color-text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -98,7 +100,7 @@ button {
 
 .contact-mail:hover,
 .contact-mail:focus {
-  color: #404bbf;
+  color: var(--color-hover);
 }
 
 .contacts {
@@ -151,7 +153,7 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--color-text);
 }
 
 /* ------Section Hero----- */
@@ -177,7 +179,7 @@ button {
 }
 
 .btn-order-service {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--secondary-font);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -198,7 +200,7 @@ button {
 
 .btn-order-service:hover,
 .btn-order-service:focus {
-  background-color: #404bbf;
+  background-color: var(--color-hover);
   border-radius: 4px;
 }
 
@@ -355,7 +357,7 @@ button {
 
 .team-list-link:hover,
 .team-list-link:focus {
-  background-color: #404bbf;
+  background-color: var(--color-hover);
 }
 
 .social-list-icon {
@@ -406,8 +408,8 @@ button {
 
 .customers-list-link:hover,
 .customers-list-link:focus {
-  border-color: #404bbf;
-  color: #404bbf;
+  border-color: var(--color-hover);
+  color: var(--color-hover);
 }
 
 .customers-icons {
@@ -502,7 +504,7 @@ button {
 
 /*------ Portfolio------ */
 .all-btn {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--secondary-font);
   color: #4d5ae5;
   background-color: #F4F4FD;
   font-weight: 500;
@@ -528,7 +530,7 @@ button {
 .all-btn:hover,
 .all-btn:focus {
   color: #FFFFFF;
-  background-color: #404BBF;
+  background-color: var(--color-hover);
 }
 
 .logo-footer {
@@ -679,7 +681,7 @@ button {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  border-color: #404BBF;
+  border-color: var(--color-hover);
 }
 
 .modal-close-btn-icon {
@@ -687,5 +689,5 @@ button {
 }
 
 .modal-close-btn:hover .modal-close-btn-icon .modal-close-btn:focus .modal-close-btn-icon {
-  fill: #434455;
+  fill: var(--color-text);
 }
