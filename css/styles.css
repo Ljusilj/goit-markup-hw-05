@@ -13,6 +13,7 @@
   --color-shadow: rgba(46, 47, 66, 0.08);
   --color-shadow-dark: rgba(46, 47, 66, 0.16);
   --color-modal: #FCFCFC;
+  --color-teal: teal;
 }
 
 body {
@@ -167,7 +168,8 @@ button {
 }
 
 /* Header */
-.line-link:hover::after {
+
+.line-link::after {
   content: "";
   display: block;
   width: 48px;
@@ -176,6 +178,12 @@ button {
   border-radius: 2px;
   background-color: var(--color-hover);
   position: absolute;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-link:hover::after {
+  opacity: 1;
 }
 
 /* ------Section Hero----- */
@@ -526,7 +534,7 @@ button {
   position: relative;
 }
 
-.portfolio-line:hover::after {
+.portfolio-line::after {
   content: "";
   display: block;
   width: 66px;
@@ -536,10 +544,14 @@ button {
   background-color: var(--color-hover);
   position: absolute;
   margin-top: 20px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-line::after {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.portfolio-line:hover::after {
+  opacity: 1;
 }
+
 
 .all-btn {
   font-family: var(--secondary-font);
@@ -557,7 +569,7 @@ button {
 
 .flex-button {
   padding: 12px 24px;
-  border: 1px solid var(-color-border);
+  border: 1px solid var(--color-border);
 }
 
 .flex-button:hover,
@@ -597,8 +609,8 @@ button {
 }
 
 .flex-cards {
-  width: 360px;
-  /* flex-basis: calc((100%-48px)/3);  */
+  max-width: 360px;
+  flex-basis: calc((100%-48px)/3);
   display: block;
   position: relative;
   transition: transform 500ms linear;
@@ -703,9 +715,13 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   scale: 1.2;
-  
+
+  transition: background-color 550ms linear;
 }
 
+.modal:hover {
+ background-color: var( --color-teal);
+}
 
 .modal-close-btn {
   background-color: var(--color-border);
